@@ -1,0 +1,30 @@
+@import "../styles/tokens.scss";
+
+.faqContainer {
+  display: grid;
+  grid-template-columns: 1fr 42px;
+  padding: 64px;
+  background-color: $color-snow-gray;
+  column-gap: 64px;
+  transition: background-color 0.1s ease-out;
+
+  &.expanded {
+    grid-template-columns: 1fr 1fr 42px;
+    background-color: $color-electric-blue;
+  }
+}
+
+.icon {
+  color: $color-black;
+  cursor: pointer;
+  svg {
+    transition: transform 0.1s ease-out;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(0.8);
+      transform-origin: 50% 50%;
+    }
+  }
+}
