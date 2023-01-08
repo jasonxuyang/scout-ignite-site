@@ -1,0 +1,59 @@
+@import "../styles/tokens.scss";
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-black;
+  color: $color-white;
+  padding: 144px;
+  box-sizing: border-box;
+  position: relative;
+
+  h1 {
+    margin-bottom: 16px;
+    z-index: 1;
+  }
+
+  p {
+    z-index: 1;
+  }
+
+  .questionMark {
+    position: absolute;
+    bottom: 128px;
+    left: 64px;
+    z-index: 0;
+    width: 80px;
+    height: 80px;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  .redBlob {
+    position: absolute;
+    bottom: 45%;
+    left: -10%;
+    z-index: 0;
+    height: 450px;
+    width: 450px;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      height: 200px;
+      width: 200px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding: 128px $margin-mobile 128px $margin-mobile;
+    height: auto;
+  }
+}
+
+.accessibiltyFaq {
+  background-color: $color-ignite-red !important;
+}

@@ -2,15 +2,29 @@
 
 .faqContainer {
   display: grid;
-  grid-template-columns: 1fr 42px;
-  padding: 64px;
+  grid-template-columns: 40% 42px;
+  padding: $margin;
   background-color: $color-snow-gray;
-  column-gap: 64px;
   transition: background-color 0.1s ease-out;
+  cursor: pointer;
+  border-bottom: 3px solid $color-black;
+  justify-content: space-between;
+
+  h3 {
+    text-transform: uppercase;
+  }
 
   &.expanded {
     grid-template-columns: 1fr 1fr 42px;
     background-color: $color-electric-blue;
+    column-gap: 64px;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    padding: 32px;
   }
 }
 
@@ -26,5 +40,9 @@
       transform: scale(0.8);
       transform-origin: 50% 50%;
     }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: none;
   }
 }

@@ -1,6 +1,6 @@
 import { IIconProps } from "./types";
 
-export default function Expand({ className }: IIconProps) {
+export default function Minimize({ className }: IIconProps) {
   return (
     <div className={className}>
       <svg
