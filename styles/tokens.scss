@@ -5,7 +5,7 @@ $font-size-heading3: 32px;
 $font-size-heading4: 16px;
 $font-size-body: 18px;
 $font-size-bigbody: 24px;
-$font-size-mobilebody: 12px;
+$font-size-mobilebody: 16px;
 $font-size-mobileheading: 24px;
 
 $line-height-heading1: 138px;
@@ -14,7 +14,7 @@ $line-height-heading3: 42px;
 $line-height-heading4: 26px;
 $line-height-body: 30px;
 $line-height-bigbody: 32px;
-$line-height-mobilebody: 20px;
+$line-height-mobilebody: 24px;
 $line-height-mobileheading: 30px;
 
 /** Color */
@@ -30,7 +30,12 @@ $color-periwinkle: #a5a6f8;
 
 /** Breakpoints */
 $breakpoint-mobile: 640px;
+$breakpoint-midsize: 1000px;
 
 /** Layout */
 $margin: 64px;
 $margin-mobile: 32px;
+$margin-nav: 66px;
+
+/** */
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);

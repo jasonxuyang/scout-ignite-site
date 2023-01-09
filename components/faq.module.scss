@@ -20,7 +20,8 @@
     column-gap: 64px;
   }
 
-  @media screen and (max-width: $breakpoint-mobile) {
+  @media screen and (max-width: $breakpoint-mobile),
+    screen and (max-width: $breakpoint-midsize) {
     display: flex;
     flex-direction: column;
     row-gap: 16px;
@@ -42,7 +43,8 @@
     }
   }
 
-  @media screen and (max-width: $breakpoint-mobile) {
+  @media screen and (max-width: $breakpoint-mobile),
+    screen and (max-width: $breakpoint-midsize) {
     display: none;
   }
 }

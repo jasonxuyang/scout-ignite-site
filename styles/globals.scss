@@ -44,6 +44,10 @@ html {
   overflow-x: hidden;
 }
 
+main {
+  padding-top: $margin-nav;
+}
+
 li,
 ul {
   list-style: none;
