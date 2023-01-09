@@ -8,6 +8,10 @@
   border-bottom: 2px solid $color-black;
   justify-content: space-between;
 
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding-bottom: 6px;
+  }
+
   .submitButton {
     display: flex;
     flex-direction: row;
@@ -16,15 +20,17 @@
     column-gap: 6px;
     cursor: pointer;
 
-    &:hover {
-      .arrowDiagonal {
-        transform: translate(4px, -4px);
-        transition: transform 0.2s ease;
-        color: $color-ignite-red;
-      }
+    @media screen and (min-width: $breakpoint-midsize) {
+      &:hover {
+        .arrowDiagonal {
+          transform: translate(4px, -4px);
+          transition: transform 0.2s ease;
+          color: $color-ignite-red;
+        }
 
-      h4 {
-        color: $color-ignite-red;
+        h4 {
+          color: $color-ignite-red;
+        }
       }
     }
   }
@@ -34,6 +40,10 @@
     font-weight: 700;
     font-style: normal;
     font-size: 24px;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 16px;
+    }
   }
 
   input {
@@ -43,6 +53,10 @@
     font-size: 24px;
     width: 100%;
     opacity: 0.6;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 16px;
+    }
 
     &:focus {
       opacity: 1;

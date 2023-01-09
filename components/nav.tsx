@@ -9,42 +9,41 @@ import NavMobile from "./navMobile";
 
 export default function Nav() {
   const breakpoint = useBreakpoint();
-  if (breakpoint !== BREAKPOINT.MOBILE)
-    return (
-      <nav className={styles.navContainer}>
-        <Link href="/">
-          <Logo className={styles.logo} />
+  if (breakpoint === BREAKPOINT.MOBILE) return <NavMobile />;
+  return (
+    <nav className={styles.navContainer}>
+      <Link href="/">
+        <Logo className={styles.logo} />
+      </Link>
+      <ul className={styles.navLinks}>
+        <Link href="/about">
+          <li>About</li>
         </Link>
-        <ul className={styles.navLinks}>
-          <Link href="/about">
-            <li>About</li>
-          </Link>
 
-          <Link href="/speakers">
-            <li>Speakers </li>
-          </Link>
+        <Link href="/speakers">
+          <li>Speakers </li>
+        </Link>
 
-          <Link href="/schedule">
-            <li>Schedule</li>
-          </Link>
+        <Link href="/schedule">
+          <li>Schedule</li>
+        </Link>
 
-          {breakpoint !== BREAKPOINT.MIDSIZE && (
-            <Link href="/get-involved">
-              <li>Get Involved </li>
-            </Link>
-          )}
-
-          <Link href="/faq">
-            <li>Faq</li>
+        {breakpoint !== BREAKPOINT.MIDSIZE && (
+          <Link href="/get-involved">
+            <li>Get Involved </li>
           </Link>
+        )}
 
-          <Link href="/tickets">
-            <li className={styles.tickets}>
-              Tickets <ArrowDiagonal className={styles.arrowDiagonal} />
-            </li>
-          </Link>
-        </ul>
-      </nav>
-    );
-  return <NavMobile />;
+        <Link href="/faq">
+          <li>Faq</li>
+        </Link>
+
+        <Link href="/tickets">
+          <li className={styles.tickets}>
+            Tickets <ArrowDiagonal className={styles.arrowDiagonal} />
+          </li>
+        </Link>
+      </ul>
+    </nav>
+  );
 }
