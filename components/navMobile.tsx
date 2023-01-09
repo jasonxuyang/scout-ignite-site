@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BREAKPOINT } from "../helpers/types";
 import useBreakpoint from "../helpers/useBreakpoint";
 import ArrowDiagonal from "../icons/arrowDiagonal";
@@ -25,6 +25,7 @@ export default function NavMobile({}: INavProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
     } else {
       document.body.style.position = "";
       document.body.style.top = "";
