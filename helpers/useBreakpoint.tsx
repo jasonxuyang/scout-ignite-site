@@ -16,6 +16,7 @@ export default function useBreakpoint() {
   };
 
   useEffect(() => {
+    validateBreakpoint();
     window.addEventListener("resize", validateBreakpoint);
     return () => {
       window.removeEventListener("resize", validateBreakpoint);
