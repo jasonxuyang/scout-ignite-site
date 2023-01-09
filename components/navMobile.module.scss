@@ -54,7 +54,7 @@
   left: 0;
   height: calc(100vh);
   width: 100vw;
-  z-index: 0;
+  z-index: 1;
   transition: position 2s ease;
   background-color: $color-black;
   transform: translateY(-100vh);
@@ -66,7 +66,6 @@
 
   .navMobileContainer {
     border: none;
-    justify-content: flex-end;
 
     li {
       border: none;

@@ -9,10 +9,12 @@ import NavMobile from "./navMobile";
 
 export default function Nav() {
   const breakpoint = useBreakpoint();
-  if (breakpoint === BREAKPOINT.DESKTOP)
+  if (breakpoint !== BREAKPOINT.MOBILE)
     return (
       <nav className={styles.navContainer}>
-        <Logo className={styles.logo} />
+        <Link href="/">
+          <Logo className={styles.logo} />
+        </Link>
         <ul className={styles.navLinks}>
           <Link href="/about">
             <li>About</li>
@@ -26,9 +28,11 @@ export default function Nav() {
             <li>Schedule</li>
           </Link>
 
-          <Link href="/get-involved">
-            <li>Get Involved </li>
-          </Link>
+          {breakpoint !== BREAKPOINT.MIDSIZE && (
+            <Link href="/get-involved">
+              <li>Get Involved </li>
+            </Link>
+          )}
 
           <Link href="/faq">
             <li>Faq</li>
@@ -36,7 +40,7 @@ export default function Nav() {
 
           <Link href="/tickets">
             <li className={styles.tickets}>
-              Tickets <ArrowDiagonal />
+              Tickets <ArrowDiagonal className={styles.arrowDiagonal} />
             </li>
           </Link>
         </ul>

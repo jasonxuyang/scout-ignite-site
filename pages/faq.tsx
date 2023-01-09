@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Faq from "../components/faq";
+import Footer from "../components/footer";
 import QuestionMark from "../illustrations/faq/questionMark";
 import RedBlob from "../illustrations/faq/redBlob";
 import styles from "./faq.module.scss";

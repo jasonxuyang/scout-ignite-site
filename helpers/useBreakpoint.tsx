@@ -5,9 +5,14 @@ export default function useBreakpoint() {
   const [breakpoint, setBreakpoint] = useState<BREAKPOINT | null>(null);
 
   const validateBreakpoint = () => {
-    if (window.matchMedia(`(max-width: ${BREAKPOINT.MOBILE}px)`).matches)
+    if (window.matchMedia(`(max-width: ${BREAKPOINT.MOBILE}px)`).matches) {
       setBreakpoint(BREAKPOINT.MOBILE);
-    else setBreakpoint(BREAKPOINT.DESKTOP);
+      return breakpoint;
+    }
+    if (window.matchMedia(`(max-width: ${BREAKPOINT.MIDSIZE}px)`).matches) {
+      setBreakpoint(BREAKPOINT.MIDSIZE);
+      return breakpoint;
+    } else setBreakpoint(BREAKPOINT.DESKTOP);
   };
 
   useEffect(() => {

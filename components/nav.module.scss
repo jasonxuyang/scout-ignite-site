@@ -49,6 +49,17 @@
 
     &.tickets {
       background-color: $color-ignite-red;
+
+      &:hover {
+        .arrowDiagonal {
+          transform: translate(4px, -4px);
+          transition: transform 0.2s ease;
+        }
+
+        h4 {
+          color: $color-ignite-red;
+        }
+      }
     }
 
     &:hover {

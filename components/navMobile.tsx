@@ -42,6 +42,7 @@ export default function NavMobile({}: INavProps) {
           }`}
         >
           <div className={styles.navMobileContainer}>
+            <Logo className={styles.logo} />
             <ul className={styles.navMobileLinks}>
               <li onClick={!isOpen ? open : close}>
                 <Close />

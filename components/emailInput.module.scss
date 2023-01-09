@@ -1,0 +1,51 @@
+@import "../styles/tokens.scss";
+
+.emailInput {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  padding-bottom: 10px;
+  border-bottom: 2px solid $color-black;
+  justify-content: space-between;
+
+  .submitButton {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    column-gap: 6px;
+    cursor: pointer;
+
+    &:hover {
+      .arrowDiagonal {
+        transform: translate(4px, -4px);
+        transition: transform 0.2s ease;
+        color: $color-ignite-red;
+      }
+
+      h4 {
+        color: $color-ignite-red;
+      }
+    }
+  }
+
+  h4 {
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  input {
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    width: 100%;
+    opacity: 0.6;
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+}

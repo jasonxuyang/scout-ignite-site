@@ -1,0 +1,130 @@
+@import "../styles/tokens.scss";
+
+.footerContainer {
+  box-sizing: border-box;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 20% 25% 1fr;
+  color: $color-black;
+  background-color: $color-snow-gray;
+  padding: $margin;
+  column-gap: 96px;
+
+  @media screen and (max-width: $breakpoint-midsize) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 64px;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 48px;
+    padding-left: $margin-mobile;
+    padding-right: $margin-mobile;
+  }
+}
+
+.leftBlock {
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 48px;
+
+    .logoScout {
+      height: 80px;
+      width: 100px;
+    }
+  }
+
+  .universityInfo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+
+  p {
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+  }
+}
+
+.middleBlock {
+  position: relative;
+  height: fit-content;
+
+  .spark {
+    width: 100%;
+    height: 280px;
+    transform: rotate(-8deg);
+    color: $color-electric-blue;
+  }
+
+  h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $color-white;
+
+    text-align: center;
+  }
+
+  @media screen and (max-width: $breakpoint-midsize) {
+    display: none;
+  }
+}
+
+.rightBlock {
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+
+  h3 {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+
+  .socialIcons {
+    display: flex;
+    flex-direction: row;
+    margin-left: -16px;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+
+    .socialIcon {
+      &:hover {
+        transition: transform 0.2s ease;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.socialIconsMobile {
+  display: none;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: block;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: -16px;
+    justify-content: center;
+  }
+}
