@@ -1,5 +1,5 @@
 import { BaseSyntheticEvent, useState } from "react";
-import ArrowDiagonal from "../icons/arrowDiagonal";
+import ArrowDiagonal from "../../../icons/arrowDiagonal";
 import styles from "./emailInput.module.scss";
 
 interface IEmailInputProps {
@@ -8,11 +8,8 @@ interface IEmailInputProps {
 }
 
 export default function Faq({ onSubmit }: IEmailInputProps) {
-  const [email, setEmail] = useState<string>("Your Email");
+  const [email, setEmail] = useState<string>("");
 
-  const handleBlur = () => {
-    if (email === "") setEmail("Your Email");
-  };
   const handleChange = (e: BaseSyntheticEvent) => {
     setEmail(e.target.value);
   };
@@ -29,9 +26,9 @@ export default function Faq({ onSubmit }: IEmailInputProps) {
       <input
         type="email"
         value={email}
+        placeholder="Your Email"
         className={styles.active}
         onChange={handleChange}
-        onBlur={handleBlur}
       />
       <div
         className={styles.submitButton}

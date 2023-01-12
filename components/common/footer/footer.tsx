@@ -1,14 +1,8 @@
-import Link from "next/link";
-import { useState } from "react";
-import { BREAKPOINT } from "../helpers/types";
-import useBreakpoint from "../helpers/useBreakpoint";
-import ArrowDiagonal from "../icons/arrowDiagonal";
-import LogoScout from "../icons/logoScout";
+import LogoScout from "../../../icons/logoScout";
 import EmailInput from "./emailInput";
 import styles from "./footer.module.scss";
-import NavMobile from "./navMobile";
 import { SocialIcon } from "react-social-icons";
-import Spark from "../illustrations/faq/spark";
+import Spark from "../../../illustrations/faq/spark";
 
 export default function Footer() {
   return (

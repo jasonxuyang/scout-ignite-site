@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { useState } from "react";
-import { BREAKPOINT } from "../helpers/types";
-import useBreakpoint from "../helpers/useBreakpoint";
-import ArrowDiagonal from "../icons/arrowDiagonal";
-import Logo from "../icons/logo";
+import { BREAKPOINT } from "../../../helpers/types";
+import useBreakpoint from "../../../helpers/useBreakpoint";
+import ArrowDiagonal from "../../../icons/arrowDiagonal";
+import Logo from "../../../icons/logo";
 import styles from "./nav.module.scss";
 import NavMobile from "./navMobile";
 

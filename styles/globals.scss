@@ -107,10 +107,16 @@ h1 {
   font-style: normal;
   font-size: $font-size-heading1;
   line-height: $line-height-heading1;
+  text-transform: uppercase;
+
+  @media screen and (max-width: $breakpoint-midsize) {
+    font-size: 96px;
+    line-height: 112px;
+  }
 
   @media screen and (max-width: $breakpoint-mobile) {
-    font-size: 64px;
-    line-height: 82px;
+    font-size: 48px;
+    line-height: 64px;
   }
 }
 
@@ -120,6 +126,7 @@ h2 {
   font-style: normal;
   font-size: $font-size-heading2;
   line-height: $line-height-heading2;
+  text-transform: uppercase;
 
   &.accent {
     font-weight: 700;
@@ -154,10 +161,12 @@ h4 {
   font-style: normal;
   font-size: $font-size-heading4;
   line-height: $line-height-heading4;
+  text-transform: uppercase;
 
   @media screen and (max-width: $breakpoint-mobile) {
-    font-size: $font-size-mobileheading;
-    line-height: $line-height-mobileheading;
+    font-weight: 400;
+    font-size: $font-size-mobilebody;
+    line-height: $line-height-mobilebody;
   }
 }
 
@@ -176,5 +185,14 @@ p {
   @media screen and (max-width: $breakpoint-mobile) {
     font-size: $font-size-mobilebody;
     line-height: $line-height-mobilebody;
+  }
+}
+
+section {
+  padding: $margin;
+
+  @media screen and (max-width: $breakpoint-midsize) {
+    padding-left: $margin-mobile;
+    padding-right: $margin-mobile;
   }
 }

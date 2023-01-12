@@ -1,0 +1,84 @@
+@import "../../styles/tokens.scss";
+
+.whoAreWeContainer {
+  background-color: $color-bright-pink;
+  color: $color-black;
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.whoAreWeGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  column-gap: 16px;
+  row-gap: 32px;
+
+  @media screen and (max-width: $breakpoint-midsize) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .whoAreWeBlock {
+    h4 {
+      font-weight: 600;
+    }
+  }
+
+  .whoAreWeImage {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    margin-bottom: 12px;
+  }
+}
+
+.pageController {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
+
+  div {
+    height: 12px;
+    width: 12px;
+    border: 2px solid $color-black;
+    border-radius: 100%;
+
+    &.selected {
+      background-color: $color-black;
+    }
+
+    @media screen and (min-width: $breakpoint-midsize) {
+      &:hover {
+        transition: all 0.2s ease-out;
+        transform: scale(1.2);
+      }
+    }
+  }
+}

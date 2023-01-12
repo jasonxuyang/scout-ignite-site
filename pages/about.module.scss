@@ -1,0 +1,30 @@
+@import "../styles/tokens.scss";
+@import "../styles/common.scss";
+
+.splash {
+  @extend .commonSplash;
+}
+
+.previousConferences {
+  background-color: $color-snow-gray;
+}
+
+.whoIsScout {
+  h2 {
+    margin-bottom: 64px;
+  }
+
+  p {
+    width: 60%;
+    margin-bottom: 24px;
+  }
+
+  background-color: $color-black;
+  color: $color-white;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    p {
+      width: 100%;
+    }
+  }
+}

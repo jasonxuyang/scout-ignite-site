@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { BREAKPOINT } from "../helpers/types";
-import useBreakpoint from "../helpers/useBreakpoint";
-import ArrowDiagonal from "../icons/arrowDiagonal";
-import ArrowDiagonalMobile from "../icons/arrowDiagonalMobile";
-import Burger from "../icons/burger";
-import Close from "../icons/close";
-import Logo from "../icons/logo";
+import { BREAKPOINT } from "../../../helpers/types";
+import useBreakpoint from "../../../helpers/useBreakpoint";
+import ArrowDiagonal from "../../../icons/arrowDiagonal";
+import ArrowDiagonalMobile from "../../../icons/arrowDiagonalMobile";
+import Burger from "../../../icons/burger";
+import Close from "../../../icons/close";
+import Logo from "../../../icons/logo";
 import styles from "./navMobile.module.scss";
 
 interface INavProps {}

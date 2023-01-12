@@ -1,16 +1,8 @@
 @import "../styles/tokens.scss";
+@import "../styles/common.scss";
 
 .splash {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: $color-black;
-  color: $color-white;
-  padding: 144px;
-  box-sizing: border-box;
-  position: relative;
+  @extend .commonSplash;
 
   h1 {
     margin-bottom: 16px;
@@ -46,11 +38,6 @@
       height: 200px;
       width: 200px;
     }
-  }
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    padding: 128px $margin-mobile 128px $margin-mobile;
-    height: auto;
   }
 }
 

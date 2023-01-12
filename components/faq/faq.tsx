@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Expand from "../icons/expand";
-import Minimize from "../icons/minimize";
+import Expand from "../../icons/expand";
+import Minimize from "../../icons/minimize";
 import styles from "./faq.module.scss";
 
 interface IFaqProps {
