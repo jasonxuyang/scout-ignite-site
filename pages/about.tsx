@@ -4,7 +4,7 @@ import Button from "../components/common/button";
 import CustomImage from "../components/common/customImage";
 import styles from "./about.module.scss";
 
-export default function FAQ() {
+export default function About() {
   const renderSplash = () => {
     return (
       <section className={styles.splash}>

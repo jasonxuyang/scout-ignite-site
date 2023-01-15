@@ -1,0 +1,49 @@
+@import "../../styles/tokens.scss";
+
+.container {
+  position: relative;
+  height: 150px;
+}
+
+.scrollingBannerWrapper {
+  position: absolute;
+  background-color: $color-canary-yellow;
+  color: $color-black;
+  display: flex;
+  column-gap: 48px;
+  transform: rotate(-2deg) translateX(-5%);
+  width: 110%;
+  border: $color-black 2px solid;
+}
+
+.scrollingBannerContainerDefault {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  column-gap: 48px;
+
+  h4 {
+    white-space: nowrap;
+  }
+
+  &.animate {
+    animation: marquee 20s linear infinite;
+
+    @keyframes marquee {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-40%, 0, 0);
+      }
+    }
+  }
+}
+
+.scrollingBannerWrapperBackground {
+  @extend .scrollingBannerWrapper;
+  color: $color-canary-yellow;
+  transform: rotate(6deg) translateX(-5%);
+}

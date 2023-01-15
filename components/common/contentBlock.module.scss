@@ -1,0 +1,9 @@
+@import "../../styles/tokens.scss";
+
+.contentBlockContainerDefault {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  width: 100%;
+  height: fit-content;
+}
