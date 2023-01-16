@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useState } from "react";
 import { BREAKPOINT } from "../../../helpers/types";
 import useBreakpoint from "../../../helpers/useBreakpoint";
 import ArrowDiagonal from "../../../icons/arrowDiagonal";

@@ -4,6 +4,7 @@ import Button from "../components/common/button";
 import ContentBlock from "../components/common/contentBlock";
 import CustomImage from "../components/common/customImage";
 import ScrollingBanner from "../components/common/scrollingBanner";
+import SponsorsGrid from "../components/common/sponsorsGrid";
 import styles from "./get-involved.module.scss";
 
 export default function GetInvolved() {
@@ -136,6 +137,7 @@ export default function GetInvolved() {
       <div className={styles.scrollingBannerWrapper}>
         <ScrollingBanner text="Get Involved" color="yellow" />
       </div>
+      <SponsorsGrid />
     </>
   );
 }

@@ -144,6 +144,7 @@ h3 {
   font-style: normal;
   font-size: $font-size-heading3;
   line-height: $line-height-heading3;
+  text-transform: uppercase;
 
   &.accent {
     font-weight: 700;
@@ -151,7 +152,7 @@ h3 {
 
   @media screen and (max-width: $breakpoint-mobile) {
     font-size: $font-size-mobileheading;
-    line-height: $line-height-mobileheading;
+    line-height: 48px;
   }
 }
 
