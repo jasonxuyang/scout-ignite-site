@@ -1,15 +1,48 @@
 @import "../styles/tokens.scss";
 @import "../styles/common.scss";
 
+.whoIsScout {
+  background-color: $color-black;
+}
+
 .splash {
   @extend .commonSplash;
 }
 
 .previousConferences {
   background-color: $color-snow-gray;
+  color: $color-black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media screen and (min-width: $breakpoint-midsize) {
+    margin-bottom: 200px;
+    margin-top: 200px;
+
+    h2 {
+      z-index: 1;
+      margin-top: -200px;
+      width: 60%;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -200px;
+      bottom: -200px;
+      left: -200px;
+      width: 300%;
+      background-color: inherit;
+      z-index: 0;
+      transform: rotate(-3deg);
+      transform-origin: left;
+    }
+  }
 }
 
 .whoIsScout {
+  position: relative;
   h2 {
     margin-bottom: 64px;
   }

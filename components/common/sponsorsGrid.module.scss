@@ -33,6 +33,7 @@
   justify-content: center;
   column-gap: 32px;
   row-gap: 64px;
+  width: 100%;
 
   .logo {
     border: 3px solid $color-white;
@@ -51,5 +52,17 @@
         transition: transform 0.1s ease-out;
       }
     }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: auto;
+      height: 130px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 16px;
+    row-gap: 32px;
   }
 }

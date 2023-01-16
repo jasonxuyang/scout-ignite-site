@@ -1,0 +1,9 @@
+.lineDefault {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 4s ease;
+
+  &.completed {
+    stroke-dashoffset: 0;
+  }
+}

@@ -12,6 +12,8 @@ import Blob from "../illustrations/blob";
 import styles from "./faq.module.scss";
 import Spark from "../illustrations/spark";
 import Parallax from "../components/common/parallax";
+import Line from "../components/common/line";
+import FaqLine from "../illustrations/lines/faqLine";
 
 interface IFaqData {
   question: string;
@@ -115,10 +117,6 @@ export default function FAQ() {
     expandedFaq === index ? minimizeFaq() : expandFaq(index);
   };
 
-  // Parallax
-
-  const blueSpark = createRef<any>();
-
   // Rendering Logic
   const renderFaqs = () => {
     return faqData.map((faq, index) => {
@@ -138,6 +136,14 @@ export default function FAQ() {
     });
   };
 
+  const renderLine = () => {
+    return (
+      <Parallax className={styles.line} parallaxFactor={1.1}>
+        <Line svg={<FaqLine />} />
+      </Parallax>
+    );
+  };
+
   const renderSplash = () => {
     return (
       <div className={styles.splash}>
@@ -146,6 +152,7 @@ export default function FAQ() {
           You&apos;ve got (frequently asked) questions? We&apos;ve (hopefully)
           got answers.
         </p>
+        {renderLine()}
         <Parallax parallaxFactor={1} className={styles.questionMark1Wrapper}>
           <QuestionMark />
         </Parallax>
@@ -158,7 +165,7 @@ export default function FAQ() {
         <Parallax parallaxFactor={0.5} className={styles.redBlob}>
           <Blob dotted />
         </Parallax>
-        <Parallax parallaxFactor={0.8} className={styles.blueSpark}>
+        <Parallax parallaxFactor={0.7} className={styles.blueSpark}>
           <Spark dotted />
         </Parallax>
       </div>

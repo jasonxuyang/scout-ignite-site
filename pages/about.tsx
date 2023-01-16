@@ -55,11 +55,11 @@ export default function About() {
   };
 
   return (
-    <>
+    <div className={styles.whoIsScout}>
       {renderSplash()}
       {renderPreviousConferences()}
       {renderWhoIsScout()}
       {<WhoAreWe />}
-    </>
+    </div>
   );
 }
