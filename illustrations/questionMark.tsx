@@ -1,9 +1,16 @@
-import { IIconProps } from "../../icons/types";
+import { IIconProps } from "../icons/types";
 
 export default function QuestionMark({ className }: IIconProps) {
   return (
     <div className={className}>
-      <div style={{ position: "relative", height: "100%", width: "100%" }}>
+      <div
+        style={{
+          position: "relative",
+          height: "0",
+          width: "100%",
+          paddingBottom: "273.913%",
+        }}
+      >
         <svg
           width="100%"
           height="100%"

@@ -1,9 +1,17 @@
-import { useState } from "react";
+import {
+  BaseSyntheticEvent,
+  createRef,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Faq from "../components/faq/faq";
 import Footer from "../components/common/footer/footer";
-import QuestionMark from "../illustrations/faq/questionMark";
-import RedBlob from "../illustrations/faq/redBlob";
+import QuestionMark from "../illustrations/questionMark";
+import Blob from "../illustrations/blob";
 import styles from "./faq.module.scss";
+import Spark from "../illustrations/spark";
+import Parallax from "../components/common/parallax";
 
 interface IFaqData {
   question: string;
@@ -107,6 +115,10 @@ export default function FAQ() {
     expandedFaq === index ? minimizeFaq() : expandFaq(index);
   };
 
+  // Parallax
+
+  const blueSpark = createRef<any>();
+
   // Rendering Logic
   const renderFaqs = () => {
     return faqData.map((faq, index) => {
@@ -134,8 +146,21 @@ export default function FAQ() {
           You&apos;ve got (frequently asked) questions? We&apos;ve (hopefully)
           got answers.
         </p>
-        <QuestionMark className={styles.questionMark} />
-        <RedBlob className={styles.redBlob} />
+        <Parallax parallaxFactor={1} className={styles.questionMark1Wrapper}>
+          <QuestionMark />
+        </Parallax>
+        <Parallax parallaxFactor={1.2} className={styles.questionMark2Wrapper}>
+          <QuestionMark className={styles.questionMark2} />
+        </Parallax>
+        <Parallax parallaxFactor={1.2} className={styles.questionMark3Wrapper}>
+          <QuestionMark className={styles.questionMark3} />
+        </Parallax>
+        <Parallax parallaxFactor={0.5} className={styles.redBlob}>
+          <Blob dotted />
+        </Parallax>
+        <Parallax parallaxFactor={0.8} className={styles.blueSpark}>
+          <Spark dotted />
+        </Parallax>
       </div>
     );
   };

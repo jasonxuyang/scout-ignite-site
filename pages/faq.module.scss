@@ -3,6 +3,7 @@
 
 .splash {
   @extend .commonSplash;
+  overflow-y: hidden;
 
   h1 {
     margin-bottom: 16px;
@@ -13,30 +14,68 @@
     z-index: 1;
   }
 
-  .questionMark {
+  .questionMark1Wrapper {
     position: absolute;
     bottom: 128px;
     left: 64px;
     z-index: 0;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    z-index: 2;
 
     @media screen and (max-width: $breakpoint-mobile) {
       display: none;
     }
   }
 
+  .questionMark2Wrapper {
+    position: absolute;
+    top: 15%;
+    right: 30%;
+    z-index: 0;
+    width: 32px;
+    z-index: 2;
+  }
+
+  .questionMark2 {
+    transform: rotate(-20deg);
+  }
+
+  .questionMark3Wrapper {
+    position: absolute;
+    top: 20%;
+    right: 35%;
+    z-index: 0;
+    width: 32px;
+    z-index: 2;
+  }
+
+  .questionMark3 {
+    transform: rotate(-20deg);
+  }
+
   .redBlob {
     position: absolute;
     bottom: 45%;
-    left: -10%;
+    left: -5%;
     z-index: 0;
-    height: 450px;
-    width: 450px;
+    width: 500px;
+    color: $color-ignite-red;
 
-    @media screen and (max-width: $breakpoint-mobile) {
-      height: 200px;
-      width: 200px;
+    @media screen and (max-width: $breakpoint-midsize) {
+      width: 300px;
+    }
+  }
+
+  .blueSpark {
+    position: absolute;
+    bottom: 10%;
+    right: -10%;
+    z-index: 0;
+    width: 600px;
+    color: $color-electric-blue;
+
+    @media screen and (max-width: $breakpoint-midsize) {
+      display: none;
     }
   }
 }

@@ -2,7 +2,7 @@ import LogoScout from "../../../icons/logoScout";
 import EmailInput from "./emailInput";
 import styles from "./footer.module.scss";
 import { SocialIcon } from "react-social-icons";
-import Spark from "../../../illustrations/faq/spark";
+import Spark from "../../../illustrations/spark";
 
 export default function Footer() {
   return (
