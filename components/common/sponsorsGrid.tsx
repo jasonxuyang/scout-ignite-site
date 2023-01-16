@@ -1,20 +1,58 @@
+import Link from "next/link";
 import CustomImage from "./customImage";
 import styles from "./sponsorsGrid.module.scss";
 
 interface ISponsorData {
   logoUrl: string;
   name: string;
+  href: string;
 }
 const sponsorsData: ISponsorData[] = [
-  { logoUrl: "/img/Figma-Wordmark-White.svg", name: "Figma" },
-  { logoUrl: "/img/Figma-Wordmark-White.svg", name: "Figma" },
-  { logoUrl: "/img/Figma-Wordmark-White.svg", name: "Figma" },
-  { logoUrl: "/img/Figma-Wordmark-White.svg", name: "Figma" },
-  { logoUrl: "/img/Figma-Wordmark-White.svg", name: "Figma" },
-  { logoUrl: "/img/Figma-Wordmark-White.svg", name: "Figma" },
-  { logoUrl: "/img/Figma-Wordmark-White.svg", name: "Figma" },
-  { logoUrl: "/img/Figma-Wordmark-White.svg", name: "Figma" },
-  { logoUrl: "/img/Figma-Wordmark-White.svg", name: "Figma" },
+  {
+    logoUrl: "/img/Figma-Wordmark-White.svg",
+    name: "Figma",
+    href: "https://www.figma.com/",
+  },
+  {
+    logoUrl: "/img/Figma-Wordmark-White.svg",
+    name: "Figma",
+    href: "https://www.figma.com/",
+  },
+  {
+    logoUrl: "/img/Figma-Wordmark-White.svg",
+    name: "Figma",
+    href: "https://www.figma.com/",
+  },
+  {
+    logoUrl: "/img/Figma-Wordmark-White.svg",
+    name: "Figma",
+    href: "https://www.figma.com/",
+  },
+  {
+    logoUrl: "/img/Figma-Wordmark-White.svg",
+    name: "Figma",
+    href: "https://www.figma.com/",
+  },
+  {
+    logoUrl: "/img/Figma-Wordmark-White.svg",
+    name: "Figma",
+    href: "https://www.figma.com/",
+  },
+  {
+    logoUrl: "/img/Figma-Wordmark-White.svg",
+    name: "Figma",
+    href: "https://www.figma.com/",
+  },
+  {
+    logoUrl: "/img/Figma-Wordmark-White.svg",
+    name: "Figma",
+    href: "https://www.figma.com/",
+  },
+  {
+    logoUrl: "/img/Figma-Wordmark-White.svg",
+    name: "Figma",
+    href: "https://www.figma.com/",
+  },
 ];
 
 export default function SponsorsGrid() {
@@ -24,13 +62,15 @@ export default function SponsorsGrid() {
       <div className={styles.sponsorsGridContainer}>
         {sponsorsData.map((sponsorData, index) => {
           return (
-            <div key={index} className={styles.logo}>
-              <CustomImage
-                src={sponsorData.logoUrl}
-                alt={sponsorData.name}
-                objectFit="contain"
-              />
-            </div>
+            <Link href={sponsorData.href} passHref key={index}>
+              <div className={styles.logo}>
+                <CustomImage
+                  src={sponsorData.logoUrl}
+                  alt={sponsorData.name}
+                  objectFit="contain"
+                />
+              </div>
+            </Link>
           );
         })}
       </div>
