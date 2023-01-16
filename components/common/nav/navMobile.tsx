@@ -52,13 +52,13 @@ export default function NavMobile({}: INavProps) {
               <li>About</li>
             </Link>
 
-            <Link href="/speakers">
+            {/* <Link href="/speakers">
               <li>Speakers </li>
             </Link>
 
             <Link href="/schedule">
               <li>Schedule</li>
-            </Link>
+            </Link> */}
 
             <Link href="/get-involved">
               <li>Get Involved </li>

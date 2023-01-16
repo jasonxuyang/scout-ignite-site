@@ -1,12 +1,66 @@
 @import "../styles/tokens.scss";
 @import "../styles/common.scss";
 
-.whoIsScout {
+.about {
   background-color: $color-black;
 }
 
 .splash {
   @extend .commonSplash;
+  h1,
+  p {
+    z-index: 1;
+  }
+}
+
+.line {
+  position: absolute;
+  width: 40%;
+  bottom: 0%;
+  left: 0;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 80%;
+    bottom: -15%;
+  }
+}
+
+.line1 {
+  position: absolute;
+  width: 20%;
+  bottom: 15%;
+  right: 0;
+  z-index: 2;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.blueBlobContainer {
+  position: absolute;
+  width: 30%;
+  top: 5%;
+  left: -5%;
+  z-index: 0;
+
+  .blueBlob {
+    transform: rotate(195deg);
+    color: $color-electric-blue;
+  }
+}
+
+.blueBlobContainer1 {
+  position: absolute;
+  width: 50%;
+  top: 15%;
+  right: -5%;
+  z-index: 0;
+
+  .blueBlob1 {
+    transform: rotate(220deg);
+    color: $color-electric-blue;
+  }
 }
 
 .previousConferences {
@@ -42,22 +96,87 @@
 }
 
 .whoIsScout {
+  display: grid;
+  grid-template-columns: 60% 20%;
+  column-gap: 128px;
+  align-items: center;
   position: relative;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  .aboutLine2 {
+    width: 30%;
+    position: absolute;
+    right: -5%;
+    bottom: 0;
+    z-index: 0;
+
+    @media screen and (max-width: $breakpoint-midsize) {
+      width: 40%;
+      bottom: -10%;
+      right: -10%;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
   h2 {
     margin-bottom: 64px;
+
+    strong {
+      font-weight: inherit;
+      text-decoration: underline wavy $color-ignite-red;
+      text-underline-offset: 16px;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      margin-bottom: 32px;
+      strong {
+        text-underline-offset: 8px;
+      }
+    }
   }
 
   p {
-    width: 60%;
     margin-bottom: 24px;
+  }
+
+  .scoutLogo {
+    color: $color-canary-yellow;
+    display: flex;
+    text-align: center;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 30%;
+    }
   }
 
   background-color: $color-black;
   color: $color-white;
 
-  @media screen and (max-width: $breakpoint-mobile) {
-    p {
-      width: 100%;
+  .redSparkContainer {
+    position: absolute;
+    width: 30%;
+    top: -50%;
+    right: -10%;
+    color: $color-ignite-red;
+    z-index: 1;
+
+    @media screen and (max-width: $breakpoint-midsize) {
+      width: 40%;
+      top: -20%;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 50%;
+      top: 5%;
+      left: -15%;
     }
   }
 }

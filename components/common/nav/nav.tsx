@@ -19,13 +19,13 @@ export default function Nav() {
           <li>About</li>
         </Link>
 
-        <Link href="/speakers">
+        {/* <Link href="/speakers">
           <li>Speakers </li>
-        </Link>
+        </Link> */}
 
-        <Link href="/schedule">
+        {/* <Link href="/schedule">
           <li>Schedule</li>
-        </Link>
+        </Link> */}
 
         {breakpoint !== BREAKPOINT.MIDSIZE && (
           <Link href="/get-involved">

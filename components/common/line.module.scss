@@ -3,6 +3,10 @@
   stroke-dashoffset: 1;
   transition: stroke-dashoffset 4s ease;
 
+  &.reverse {
+    stroke-dashoffset: -1;
+  }
+
   &.completed {
     stroke-dashoffset: 0;
   }

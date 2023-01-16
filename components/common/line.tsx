@@ -4,16 +4,24 @@ import styles from "./line.module.scss";
 interface ILineProps {
   svg: JSX.Element;
   className?: string;
+  reverse?: boolean;
+  triggerFromTop?: boolean;
 }
 
-export default function Line({ svg, className }: ILineProps) {
+export default function Line({
+  svg,
+  className,
+  reverse = false,
+  triggerFromTop = false,
+}: ILineProps) {
   const line = createRef<any>();
   const [isInView, setIsInView] = useState<boolean>(false);
 
   const checkInView = (element: any) => {
     let bounding = element.current.getBoundingClientRect();
     console.log(bounding);
-    return bounding.bottom >= 0;
+    if (triggerFromTop) return bounding.top <= 0;
+    else return bounding.bottom >= 0;
   };
 
   const handleAnimateLine = () => {
@@ -32,17 +40,18 @@ export default function Line({ svg, className }: ILineProps) {
   });
 
   return (
-    <div
-      style={{
-        position: "relative",
-        width: "100%",
-      }}
-      ref={line}
-      className={`${styles.lineDefault} ${
-        isInView && styles.completed
-      } ${className}`}
-    >
-      {svg}
+    <div ref={line} className={className}>
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+        }}
+        className={`${styles.lineDefault} ${reverse && styles.reverse} ${
+          isInView && styles.completed
+        }`}
+      >
+        {svg}
+      </div>
     </div>
   );
 }

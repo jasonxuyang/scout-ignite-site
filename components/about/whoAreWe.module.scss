@@ -3,6 +3,8 @@
 .whoAreWeContainer {
   background-color: $color-bright-pink;
   color: $color-black;
+  position: relative;
+  z-index: 2;
 
   .body {
     display: flex;

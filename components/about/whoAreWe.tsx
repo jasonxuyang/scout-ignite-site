@@ -92,7 +92,7 @@ export default function WhoAreWe() {
       key: number
     ) => {
       return (
-        <div className={styles.whoAreWeBlock}>
+        <div className={styles.whoAreWeBlock} key={key}>
           <CustomImage
             src={imgUrl}
             alt={name}
