@@ -1,12 +1,5 @@
-import {
-  BaseSyntheticEvent,
-  createRef,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { useState } from "react";
 import Faq from "../components/faq/faq";
-import Footer from "../components/common/footer/footer";
 import QuestionMark from "../illustrations/questionMark";
 import Blob from "../illustrations/blob";
 import styles from "./faq.module.scss";
@@ -136,14 +129,6 @@ export default function FAQ() {
     });
   };
 
-  const renderLine = () => {
-    return (
-      <Parallax className={styles.line} parallaxFactor={1.1}>
-        <Line svg={<FaqLine />} />
-      </Parallax>
-    );
-  };
-
   const renderSplash = () => {
     return (
       <div className={styles.splash}>
@@ -152,7 +137,9 @@ export default function FAQ() {
           You&apos;ve got (frequently asked) questions? We&apos;ve (hopefully)
           got answers.
         </p>
-        {renderLine()}
+        <Parallax className={styles.line} parallaxFactor={1.1}>
+          <Line svg={<FaqLine />} />
+        </Parallax>
         <Parallax parallaxFactor={1} className={styles.questionMark1Wrapper}>
           <QuestionMark />
         </Parallax>
