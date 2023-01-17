@@ -1,5 +1,4 @@
 import { useState } from "react";
-import WhoAreWe from "../components/about/whoAreWe";
 import Button from "../components/common/button";
 import ContentBlock from "../components/common/contentBlock";
 import CustomImage from "../components/common/customImage";

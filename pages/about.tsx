@@ -1,14 +1,12 @@
 import { useState } from "react";
 import WhoAreWe from "../components/about/whoAreWe";
 import Button from "../components/common/button";
-import CustomImage from "../components/common/customImage";
 import Line from "../components/common/line";
 import Parallax from "../components/common/parallax";
 import Blob from "../illustrations/blob";
 import AboutLine from "../illustrations/lines/aboutLine";
 import AboutLine1 from "../illustrations/lines/aboutLine1";
 import AboutLine2 from "../illustrations/lines/aboutLine2";
-import FaqLine from "../illustrations/lines/faqLine";
 import Scout from "../illustrations/scout";
 import Spark from "../illustrations/spark";
 import styles from "./about.module.scss";
