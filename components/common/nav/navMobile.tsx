@@ -48,7 +48,7 @@ export default function NavMobile({}: INavProps) {
             </ul>
           </div>
           <ul className={styles.navMobileOpenLinks}>
-            <Link href="/about">
+            <Link href="/about" onClick={!isOpen ? open : close}>
               <li>About</li>
             </Link>
 
@@ -60,11 +60,11 @@ export default function NavMobile({}: INavProps) {
               <li>Schedule</li>
             </Link> */}
 
-            <Link href="/get-involved">
+            <Link href="/get-involved" onClick={!isOpen ? open : close}>
               <li>Get Involved </li>
             </Link>
 
-            <Link href="/faq">
+            <Link href="/faq" onClick={!isOpen ? open : close}>
               <li>Faq</li>
             </Link>
 

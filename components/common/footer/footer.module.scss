@@ -9,6 +9,8 @@
   background-color: $color-snow-gray;
   padding: $margin;
   column-gap: 96px;
+  // position: relative;
+  // z-index: 3;
 
   @media screen and (max-width: $breakpoint-midsize) {
     grid-template-columns: 1fr 1fr;

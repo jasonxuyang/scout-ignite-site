@@ -1,7 +1,6 @@
 @import "../../styles/tokens.scss";
 
 .container {
-  background-color: $color-black;
   color: $color-white;
   padding: $margin;
   text-align: center;
@@ -10,10 +9,14 @@
   align-items: center;
   padding-bottom: 128px;
   padding-top: 128px;
+  height: fit-content;
+  position: relative;
+  z-index: 1;
 
   h3 {
     width: 80%;
     margin-bottom: 64px;
+    z-index: 2;
 
     @media screen and (max-width: $breakpoint-mobile) {
       width: 100%;
@@ -45,6 +48,7 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    background-color: $color-black;
 
     @media screen and (min-width: $breakpoint-midsize) {
       &:hover {

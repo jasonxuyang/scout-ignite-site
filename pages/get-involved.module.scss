@@ -1,10 +1,17 @@
 @import "../styles/tokens.scss";
 @import "../styles/common.scss";
 
+.getInvolved {
+  background-color: $color-black;
+}
+
 .splash {
   @extend .commonSplash;
   @media screen and (min-width: $breakpoint-midsize) {
     padding-bottom: calc(256px + 64px);
+  }
+  h1 {
+    z-index: 1;
   }
 }
 
@@ -67,7 +74,7 @@
 
   @media screen and (max-width: $breakpoint-midsize) {
     grid-template-columns: 1fr;
-    margin-bottom: 128px;
+    margin-bottom: 64px;
   }
 }
 
@@ -91,7 +98,270 @@
 }
 
 .scrollingBannerWrapper {
-  background-color: $color-black;
   padding-top: 64px;
   margin-bottom: -72px;
+  position: relative;
+  z-index: 2;
+}
+
+.pinkSmallBlobContainerSplash {
+  position: absolute;
+  width: 20%;
+  top: -5%;
+  left: 5%;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 40%;
+  }
+
+  .pinkSmallBlobSplash {
+    color: $color-bright-pink;
+  }
+}
+
+.blueDottedBlobContainerSplash {
+  position: absolute;
+  width: 30%;
+  top: -15%;
+  right: 10%;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 40%;
+    right: 0%;
+  }
+
+  .blueDottedBlobSplash {
+    transform: rotate(5deg);
+    color: $color-electric-blue;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      transform: rotate(-20deg);
+    }
+  }
+}
+
+.redDottedBlobContainerSplash {
+  position: absolute;
+  width: 30%;
+  bottom: -40%;
+  left: -5%;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 40%;
+  }
+
+  .redDottedBlobSplash {
+    transform: rotate(190deg);
+    color: $color-ignite-red;
+  }
+}
+
+.redDottedSparkContainerSplash {
+  position: absolute;
+  width: 25%;
+  bottom: 10%;
+  right: -10%;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 40%;
+    z-index: 0;
+  }
+
+  .redDottedSparkSplash {
+    color: $color-canary-yellow;
+  }
+}
+
+.redDottedBlobContainerGray {
+  position: absolute;
+  width: 30%;
+  top: 30%;
+  right: -3%;
+
+  @media screen and (max-width: $breakpoint-midsize) {
+    width: 60%;
+    top: 35%;
+  }
+
+  .redDottedBlobGray {
+    color: $color-ignite-red;
+  }
+}
+
+.blueDottedSparkContainerGray {
+  position: absolute;
+  width: 30%;
+  left: -10%;
+  bottom: -15%;
+  z-index: 2;
+
+  @media screen and (max-width: $breakpoint-midsize) {
+    width: 50%;
+    bottom: 0%;
+  }
+
+  .blueDottedSparkGray {
+    color: $color-electric-blue;
+    transform: rotate(90deg);
+  }
+}
+
+.whiteDottedSparkContainerBlack {
+  position: absolute;
+  width: 25%;
+  right: -10%;
+  top: 20%;
+
+  @media screen and (max-width: $breakpoint-midsize) {
+    width: 60%;
+    top: 25%;
+  }
+
+  .whiteDottedSparkBlack {
+    color: $color-white;
+  }
+}
+
+.blueDottedBlobContainerBlack {
+  position: absolute;
+  width: 30%;
+  left: -10%;
+  bottom: 35%;
+
+  @media screen and (max-width: $breakpoint-midsize) {
+    width: 60%;
+    bottom: 30%;
+  }
+
+  .blueDottedBlobBlack {
+    color: $color-electric-blue;
+  }
+}
+
+.stayInTouchBlock {
+  position: relative;
+  height: 400px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    height: 200px;
+    margin-top: 64px;
+  }
+
+  .pinkBlobContainer {
+    position: absolute;
+    width: 30%;
+    top: 20%;
+    left: 5%;
+    color: $color-bright-pink;
+    z-index: 2;
+  }
+
+  .sparkOutlineContainer {
+    position: absolute;
+    width: 35%;
+    top: 25%;
+    left: 20%;
+    color: $color-white;
+    z-index: 1;
+  }
+
+  .multipleSparkOutlineContainer {
+    position: absolute;
+    width: 50%;
+    top: 55%;
+    left: 40%;
+    color: $color-electric-blue;
+    z-index: 0;
+
+    .multipleSparkOutline {
+      transform: rotate(8deg);
+    }
+  }
+}
+
+.sponsorsGrid {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  @media screen and (min-width: $breakpoint-midsize) {
+    padding: $margin;
+  }
+}
+
+.purpleSparkSponsorsGridContainer {
+  position: absolute;
+  width: 25%;
+  bottom: -150%;
+  left: -5%;
+  color: $color-periwinkle;
+  z-index: 0;
+
+  .purpleSparkSponsorsGrid {
+    transform: rotate(-10deg);
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    bottom: -30%;
+    left: -10%;
+    width: 30%;
+  }
+}
+
+.pinkSparkSponsorsGridContainer {
+  position: absolute;
+  width: 15%;
+  bottom: 25%;
+  right: -5%;
+  color: $color-bright-pink;
+  z-index: 1;
+
+  .pinkSparkSponsorsGrid {
+    transform: rotate(10deg);
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 30%;
+  }
+}
+
+.blueBlobSponsorsGridContainer {
+  position: absolute;
+  width: 30%;
+  bottom: -20%;
+  right: -5%;
+  color: $color-electric-blue;
+  z-index: 0;
+
+  .blueBlobSponsorsGrid {
+    transform: rotate(-15deg);
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 60%;
+  }
+}
+
+.sponsorsGridLine {
+  position: absolute;
+  width: 80%;
+  left: -5%;
+  bottom: -10%;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.sponsorsGridLine1 {
+  position: absolute;
+  width: 60%;
+  right: -5%;
+  top: -5%;
+  z-index: 0;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    top: -12.5%;
+    right: -10%;
+    width: 150%;
+  }
 }

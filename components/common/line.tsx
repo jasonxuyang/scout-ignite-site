@@ -6,6 +6,7 @@ interface ILineProps {
   className?: string;
   reverse?: boolean;
   triggerFromTop?: boolean;
+  triggerOffset?: number;
 }
 
 export default function Line({
@@ -13,6 +14,7 @@ export default function Line({
   className,
   reverse = false,
   triggerFromTop = false,
+  triggerOffset = 0,
 }: ILineProps) {
   const line = createRef<any>();
   const [isInView, setIsInView] = useState<boolean>(false);
@@ -20,7 +22,7 @@ export default function Line({
   const checkInView = (element: any) => {
     let bounding = element.current.getBoundingClientRect();
     console.log(bounding);
-    if (triggerFromTop) return bounding.top <= 0;
+    if (triggerFromTop) return bounding.top <= triggerOffset;
     else return bounding.bottom >= 0;
   };
 

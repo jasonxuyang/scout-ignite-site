@@ -3,8 +3,17 @@ import WhoAreWe from "../components/about/whoAreWe";
 import Button from "../components/common/button";
 import ContentBlock from "../components/common/contentBlock";
 import CustomImage from "../components/common/customImage";
+import Line from "../components/common/line";
+import Parallax from "../components/common/parallax";
 import ScrollingBanner from "../components/common/scrollingBanner";
 import SponsorsGrid from "../components/common/sponsorsGrid";
+import Blob from "../illustrations/blob";
+import GetInvolvedSponsorGridLine from "../illustrations/lines/getInvolvedSponsorGridLine";
+import GetInvolvedSponsorGridLine1 from "../illustrations/lines/getInvolvedSponsorGridLine1";
+import MultipleSparkOutline from "../illustrations/multipleSparkOutline";
+import SmallBlob from "../illustrations/smallBlob";
+import Spark from "../illustrations/spark";
+import SparkOutline from "../illustrations/sparkOutline";
 import styles from "./get-involved.module.scss";
 
 export default function GetInvolved() {
@@ -12,6 +21,33 @@ export default function GetInvolved() {
     return (
       <section className={styles.splash}>
         <h1>Get Involved</h1>
+        <Parallax
+          parallaxFactor={1.2}
+          className={styles.pinkSmallBlobContainerSplash}
+        >
+          <SmallBlob className={styles.pinkSmallBlobSplash} />
+        </Parallax>
+
+        <Parallax
+          parallaxFactor={0.5}
+          className={styles.blueDottedBlobContainerSplash}
+        >
+          <Blob dotted className={styles.blueDottedBlobSplash} />
+        </Parallax>
+
+        <Parallax
+          parallaxFactor={0.5}
+          className={styles.redDottedBlobContainerSplash}
+        >
+          <Blob dotted className={styles.redDottedBlobSplash} />
+        </Parallax>
+
+        <Parallax
+          parallaxFactor={1.1}
+          className={styles.redDottedSparkContainerSplash}
+        >
+          <Spark dotted className={styles.redDottedSparkSplash} />
+        </Parallax>
       </section>
     );
   };
@@ -19,6 +55,18 @@ export default function GetInvolved() {
   const renderGraySection = () => {
     return (
       <section className={styles.graySection}>
+        <Parallax
+          parallaxFactor={0.7}
+          className={styles.redDottedBlobContainerGray}
+        >
+          <Blob dotted className={styles.redDottedBlobGray} />
+        </Parallax>
+        <Parallax
+          parallaxFactor={1.2}
+          className={styles.blueDottedSparkContainerGray}
+        >
+          <Spark dotted className={styles.blueDottedSparkGray} />
+        </Parallax>
         <div className={styles.grid}>
           <ContentBlock
             title="Spread the Word"
@@ -67,6 +115,18 @@ export default function GetInvolved() {
   const renderBlackSection = () => {
     return (
       <section className={styles.blackSection}>
+        <Parallax
+          parallaxFactor={0.8}
+          className={styles.whiteDottedSparkContainerBlack}
+        >
+          <Spark dotted className={styles.whiteDottedSparkBlack} />
+        </Parallax>
+        <Parallax
+          parallaxFactor={0.6}
+          className={styles.blueDottedBlobContainerBlack}
+        >
+          <Blob dotted className={styles.blueDottedBlobBlack} />
+        </Parallax>
         <div className={styles.grid}>
           <ContentBlock
             title="Volunteer"
@@ -119,25 +179,71 @@ export default function GetInvolved() {
             }
             button={<Button text="Form" color="white" />}
           />
-          <CustomImage
-            src="/img/img-spread-the-word.jpg"
-            alt=""
-            className={styles.image}
-          />
+          <div className={styles.stayInTouchBlock}>
+            <Parallax parallaxFactor={1.1} className={styles.pinkBlobContainer}>
+              <SmallBlob />
+            </Parallax>
+            <Parallax
+              parallaxFactor={1}
+              className={styles.sparkOutlineContainer}
+            >
+              <SparkOutline />
+            </Parallax>
+            <Parallax
+              parallaxFactor={0.8}
+              className={styles.multipleSparkOutlineContainer}
+            >
+              <MultipleSparkOutline className={styles.multipleSparkOutline} />
+            </Parallax>
+          </div>
         </div>
       </section>
     );
   };
 
   return (
-    <>
+    <div className={styles.getInvolved}>
       {renderSplash()}
       {renderGraySection()}
       {renderBlackSection()}
       <div className={styles.scrollingBannerWrapper}>
+        <Parallax
+          parallaxFactor={0.9}
+          className={styles.purpleSparkSponsorsGridContainer}
+        >
+          <Spark dotted className={styles.purpleSparkSponsorsGrid} />
+        </Parallax>
         <ScrollingBanner text="Get Involved" color="yellow" />
       </div>
-      <SponsorsGrid />
-    </>
+
+      <div className={styles.sponsorsGrid}>
+        <SponsorsGrid />
+        <Parallax
+          parallaxFactor={1.2}
+          className={styles.pinkSparkSponsorsGridContainer}
+        >
+          <Spark className={styles.pinkSparkSponsorsGrid} />
+        </Parallax>
+        <Parallax
+          parallaxFactor={0.8}
+          className={styles.blueBlobSponsorsGridContainer}
+        >
+          <Blob dotted className={styles.blueBlobSponsorsGrid} />
+        </Parallax>
+        <Line
+          svg={<GetInvolvedSponsorGridLine />}
+          triggerFromTop
+          triggerOffset={200}
+          className={styles.sponsorsGridLine}
+        />
+        <Line
+          svg={<GetInvolvedSponsorGridLine1 />}
+          triggerFromTop
+          triggerOffset={500}
+          className={styles.sponsorsGridLine1}
+          reverse
+        />
+      </div>
+    </div>
   );
 }
